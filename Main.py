@@ -33,7 +33,7 @@ def letterCheck(y, x, z, x1):
     if x1 == x:
         z += 1
     else:
-        x == x1
+        x = x1
 
 playAgain = True
 while playAgain:
@@ -60,7 +60,7 @@ while playAgain:
         playAgain = False
         print("You have the right for 10 mistakes. After this the game ends!")
         print("The game will now choose a word...")
-        pyautogui.countdown(3)
+        pyautogui.countdown(1)
         print()
         wordGen(0)
         print()
@@ -69,9 +69,17 @@ while playAgain:
         while not guessed:
             diffEasy = False
             guess = input("Give your guess: ")
-            letterCheck(guess, countRight, countRight1, countFalse)
+            # letterCheck(guess, countRight, countRight1, countFalse)
             for i in range(len(letters)):
-                word.append("_")
+                if letters[i] == guess:
+                    word[i] = guess
+                    countRight1 = countRight + 1
+            # if countRight1 == countRight:
+            #     countFalse += 1
+            else:
+                countRight = countRight1
+
+            for i in range(len(letters)):
                 print(word[i], end="")
 
             if countRight == len(letters) + 1:

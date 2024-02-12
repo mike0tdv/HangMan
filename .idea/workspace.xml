@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebcfafc4-ab7c-415d-bab4-270110cdbd12" name="Changes" comment="List of Words + Some explanations">
+    <list default="true" id="ebcfafc4-ab7c-415d-bab4-270110cdbd12" name="Changes" comment="Testing">
+      <change afterPath="$PROJECT_DIR$/Test_Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2bmPru94jwThjU8V5ZMERV6EVwW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,6 +38,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Main.executor": "Run",
+    "Python.Test_Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -95,7 +102,31 @@
       <option name="project" value="LOCAL" />
       <updated>1706818595368</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1st try for easy mode">
+      <option name="closed" value="true" />
+      <created>1706824009927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706824009927</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Half of easy is ready">
+      <option name="closed" value="true" />
+      <created>1706825263050</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706825263050</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Testing">
+      <option name="closed" value="true" />
+      <created>1706827050921</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706827050921</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +145,9 @@
     <MESSAGE value="Test Commit" />
     <MESSAGE value="Commit" />
     <MESSAGE value="List of Words + Some explanations" />
-    <option name="LAST_COMMIT_MESSAGE" value="List of Words + Some explanations" />
+    <MESSAGE value="1st try for easy mode" />
+    <MESSAGE value="Half of easy is ready" />
+    <MESSAGE value="Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
   </component>
 </project>
