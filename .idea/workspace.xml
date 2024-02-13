@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebcfafc4-ab7c-415d-bab4-270110cdbd12" name="Changes" comment="Almost done. Have to fix the mistakes count">
+    <list default="true" id="ebcfafc4-ab7c-415d-bab4-270110cdbd12" name="Changes" comment="Finished game without play again function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test_Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test_Main.py" afterDir="false" />
     </list>
@@ -151,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707856634855</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finished game without play again function">
+      <option name="closed" value="true" />
+      <created>1707859207883</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707859207883</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +182,7 @@
     <MESSAGE value="Half of easy is ready" />
     <MESSAGE value="Testing" />
     <MESSAGE value="Almost done. Have to fix the mistakes count" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost done. Have to fix the mistakes count" />
+    <MESSAGE value="Finished game without play again function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished game without play again function" />
   </component>
 </project>
