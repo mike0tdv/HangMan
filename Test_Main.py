@@ -16,6 +16,7 @@ count = 0
 count1 = 0
 mistakes = 0
 mistakes1 = 0
+temp = 0
 
 word = ""
 letters = []
@@ -24,11 +25,10 @@ i = ""
 j = 0
 k = 0
 
+
 # a function to generate a random word no matter the difficulty
 def wordGen(y):
-    global word
-    global letters
-    global rnd
+    global word, letters, rnd
 
     rnd = random.randint(0, 4)
     word = words[y][rnd]
@@ -36,8 +36,7 @@ def wordGen(y):
 
 # function that prints the word using only a "-" symbol
 def printWord():
-    global i
-    global word
+    global i, word
 
     for i in word:
         print("-", end="")
@@ -45,23 +44,17 @@ def printWord():
 
 # function that fills up a list with "-" so they can be changed into the chosen letters
 def guessFill():
-    global guesses
-    global word
-    global j
+    global guesses, word, j
 
     guesses = list(range(len(word)))
     for j in range(len(word)):
         guesses[j] = "-"
 
 # function for checking if the letter the user typed is part of the word
-def guessLoop(guess):
-    global word
-    global i
-    global j
-    global k
-    global count
-    global letters
+def guessLoop(guess, mistakes1):
+    global word, i, j, k, count, letters, temp, mistakes
 
+    temp = count
     for j in range(len(letters)):
         if guess == letters[j]:
             guesses[j] = guess
@@ -70,9 +63,11 @@ def guessLoop(guess):
             for i in guesses:
                 print(i, end="")
             print()
+    if count == temp:
+        mistakes += 1
     print(f"Letters left to guess: {count}")
+    print(f"Mistakes: {mistakes}/{mistakes1}")
     print()
-
 
 # choosing a difficulty
 diff = input("Enter a difficulty(easy, normal, hard): ").lower()
@@ -86,6 +81,7 @@ if diff == "easy":
     pyautogui.countdown(0)
     print()
 
+    mistakes1 = 10
     wordGen(easy)
 
     # a counter for the guessed letters
@@ -100,9 +96,12 @@ if diff == "easy":
     # a while loop for the user to guess the word
     while count > 0:
         guess = input("Enter a guess: ")
-        guessLoop(guess)
+        guessLoop(guess, mistakes1)
+        if mistakes == mistakes1:
+            print("You made too many mistakes!")
+            break
 
-    print(f"Congratulations! You guessed the word '{word}'")
+    print(f"The word was '{word}'! You finished with {mistakes} mistakes")
 
 # normal difficulty
 elif diff == "normal":
@@ -112,6 +111,7 @@ elif diff == "normal":
     pyautogui.countdown(3)
     print()
 
+    mistakes1 = 7
     wordGen(mid)
 
     # a counter for the guessed letters
@@ -124,12 +124,14 @@ elif diff == "normal":
     guessFill()
 
     # a while loop for the user to guess the word
-    while count != 0:
+    while count > 0:
         guess = input("Enter a guess: ")
-        guessLoop(guess)
+        guessLoop(guess, mistakes1)
+        if mistakes == mistakes1:
+            print("You made too many mistakes!")
+            break
 
-    print(f"Congratulations! You guessed the word '{word}'")
-
+    print(f"The word was '{word}'! You finished with {mistakes} mistakes")
 
 # hard difficulty
 elif diff == "hard":
@@ -139,6 +141,7 @@ elif diff == "hard":
     pyautogui.countdown(3)
     print()
 
+    mistakes1 = 4
     wordGen(hard)
 
     # a counter for the guessed letters
@@ -151,10 +154,13 @@ elif diff == "hard":
     guessFill()
 
     # a while loop for the user to guess the word
-    while count != 0:
+    while count > 0:
         guess = input("Enter a guess: ")
-        guessLoop(guess)
+        guessLoop(guess, mistakes1)
+        if mistakes == mistakes1:
+            print("You made too many mistakes!")
+            break
 
-    print(f"Congratulations! You guessed the word '{word}'")
+    print(f"The word was '{word}'! You finished with {mistakes} mistakes")
 
 
