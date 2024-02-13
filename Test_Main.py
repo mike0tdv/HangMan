@@ -31,7 +31,7 @@ def wordGen(y):
     global rnd
 
     rnd = random.randint(0, 4)
-    word = words[y][0]
+    word = words[y][rnd]
     letters = list(word)
 
 # function that prints the word using only a "-" symbol
@@ -43,7 +43,7 @@ def printWord():
         print("-", end="")
     print()
 
-# function that fils up a list with "-" so they can be changed into the chosen letters
+# function that fills up a list with "-" so they can be changed into the chosen letters
 def guessFill():
     global guesses
     global word
@@ -54,24 +54,23 @@ def guessFill():
         guesses[j] = "-"
 
 # function for checking if the letter the user typed is part of the word
-def guessLoop(guess, count1):
+def guessLoop(guess):
     global word
     global i
     global j
     global k
     global count
+    global letters
 
-    for j in range(len(word)):
-        if guess == word[j]:
+    for j in range(len(letters)):
+        if guess == letters[j]:
             guesses[j] = guess
-            for k in guesses:
-                if k == "-":
-                    count += 1
+            count -= 1
             print("You guessed!")
             for i in guesses:
                 print(i, end="")
             print()
-    print(f"Letters left to guess: {count1 - count}")
+    print(f"Letters left to guess: {count}")
     print()
 
 
@@ -90,7 +89,7 @@ if diff == "easy":
     wordGen(easy)
 
     # a counter for the guessed letters
-    count1 = len(letters)
+    count = len(word)
 
     # printing the word using only a "-" symbol
     printWord()
@@ -99,9 +98,9 @@ if diff == "easy":
     guessFill()
 
     # a while loop for the user to guess the word
-    while count != count1:
+    while count > 0:
         guess = input("Enter a guess: ")
-        guessLoop(guess, count1)
+        guessLoop(guess)
 
     print(f"Congratulations! You guessed the word '{word}'")
 
@@ -127,7 +126,7 @@ elif diff == "normal":
     # a while loop for the user to guess the word
     while count != 0:
         guess = input("Enter a guess: ")
-        guessLoop(guess, count)
+        guessLoop(guess)
 
     print(f"Congratulations! You guessed the word '{word}'")
 
@@ -154,7 +153,7 @@ elif diff == "hard":
     # a while loop for the user to guess the word
     while count != 0:
         guess = input("Enter a guess: ")
-        guessLoop(guess, count)
+        guessLoop(guess)
 
     print(f"Congratulations! You guessed the word '{word}'")
 
